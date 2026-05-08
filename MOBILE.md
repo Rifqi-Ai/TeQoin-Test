@@ -86,10 +86,12 @@ nano .env
 
 ```env
 # Wallet A - Private Key (pengirim pertama)
-PRIVATE_KEY=a6cc6e6dac504a1b07b30674a0721a79b8736e5b2b601ef4dd09bdab3942a40f
+# ⚠️ JANGAN SHARE PRIVATE KEY!
+PRIVATE_KEY=YOUR_WALLET_A_PRIVATE_KEY_HERE
 
 # Wallet B - Private Key (pengirim kedua)
-SECOND_PRIVATE_KEY=3943a739b26fbe62c060068ae1bbfe36d370291cba65f738066edc38f5492d39
+# ⚠️ JANGAN SHARE PRIVATE KEY!
+SECOND_PRIVATE_KEY=YOUR_WALLET_B_PRIVATE_KEY_HERE
 
 # Berapa transaction mau dikirim (default: 10)
 SEND_ITERATIONS=10
@@ -98,8 +100,8 @@ SEND_ITERATIONS=10
 SEND_AMOUNT_ETH=0.001
 
 # Wallet addresses (optional, untuk validation)
-WALLET_A_ADDRESS=0xE3Bb5673cdE19612816c3C753440A9629D768807
-WALLET_B_ADDRESS=0xbF2F071EAaa2769125D29Eec649eF575a7426324
+WALLET_A_ADDRESS=0xYourWalletAAddressHere
+WALLET_B_ADDRESS=0xYourWalletBAddressHere
 
 # Hardhat Network Config
 HARDHAT_NETWORK=teqoin
@@ -235,16 +237,18 @@ SEND_AMOUNT_ETH=0.0001  # Lebih kecil untuk test
 
 ### Gunakan wallet berbeda
 
-Edit `.env`:
+Edit `.env` dengan private keys milik Anda sendiri:
 ```env
-PRIVATE_KEY=<your_private_key_A>
-SECOND_PRIVATE_KEY=<your_private_key_B>
+PRIVATE_KEY=your_wallet_a_private_key_64_hex_chars
+SECOND_PRIVATE_KEY=your_wallet_b_private_key_64_hex_chars
 ```
 
-**⚠️ SECURITY WARNING**: 
-- Jangan share private key ke siapa pun
-- Jangan upload `.env` ke GitHub (sudah di `.gitignore`)
-- Gunakan testnet wallet saja, bukan mainnet
+**⚠️ CRITICAL SECURITY WARNING**: 
+- **JANGAN PERNAH share private key ke siapa pun**
+- **JANGAN upload `.env` ke GitHub** (sudah di `.gitignore`, pastikan tidak di-commit)
+- **Gunakan HANYA testnet wallet**, bukan mainnet
+- Private keys di `.env` lokal, bukan di repo
+- Kalau kunci ter-expose, segera move funds ke wallet baru
 
 ---
 
