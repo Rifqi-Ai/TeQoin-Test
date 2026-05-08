@@ -1,0 +1,13 @@
+# Node
+node_modules/
+
+# Env secrets
+.env
+
+# Hardhat artifacts
+artifacts/
+cache/
+
+# OS
+.DS_Store
+Thumbs.db
